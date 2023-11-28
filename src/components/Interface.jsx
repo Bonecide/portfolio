@@ -6,7 +6,9 @@ import { Section } from "./Section";
 
 export const Interface = () => {
   return (
-    <div className="flex flex-col items-center w-screen  snap-type-mandatory ">
+    <div
+      className="flex flex-col items-center w-screen h-screen overflow-auto md:overflow-visible"
+    >
       <AboutSection />
       <SkillsSection />
       <ProjectSections />

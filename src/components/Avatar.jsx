@@ -8,7 +8,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 export function Avatar(props) {
-  const { animation } = props;
+  const animation = "Typing";
   const group = useRef();
   const { nodes, materials } = useGLTF("models/avatar.glb");
 
@@ -29,7 +29,7 @@ export function Avatar(props) {
   );
 
   useEffect(() => {
-    actions[animation].reset().fadeIn(0.5).play();
+    actions[animation].reset().play();
 
     return () => {
       actions[animation].reset().fadeOut(0.5);

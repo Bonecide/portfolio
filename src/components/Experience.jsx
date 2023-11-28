@@ -5,12 +5,7 @@ import { Scene } from "./Scene";
 import { useState } from "react";
 export const Experience = () => {
   const [width] = useState(window.innerWidth);
-  const { animation } = useControls({
-    animation: {
-      value: "Typing",
-      options: ["Typing", "Standing", "Falling"],
-    },
-  });
+
   return (
     <>
       <OrbitControls
@@ -29,7 +24,7 @@ export const Experience = () => {
       <Environment preset="sunset" />
       <group scale={width > 800 ? 1 : 0.6} position-y={-1}>
         <group position={[-0.2, 0, -0.7]} rotation-y={Math.PI * 0.9}>
-          <Avatar animation={animation} />
+          <Avatar />
         </group>
 
         <Scene />
