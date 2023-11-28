@@ -8,16 +8,33 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 export function Avatar(props) {
-
+  const { animation } = props;
   const group = useRef();
   const { nodes, materials } = useGLTF("models/avatar.glb");
 
   const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
+  const { animations: fallingAnimations } = useFBX(
+    "animations/Falling Idle.fbx"
+  );
+  const { animations: standingAnimations } = useFBX(
+    "animations/Standing Idle.fbx"
+  );
+
   typingAnimation[0].name = "Typing";
-  const { actions } = useAnimations(typingAnimation, group);
+  fallingAnimations[0].name = "Falling";
+  standingAnimations[0].name = "Standing";
+  const { actions } = useAnimations(
+    [typingAnimation[0], fallingAnimations[0], standingAnimations[0]],
+    group
+  );
+
   useEffect(() => {
-    actions["Typing"].reset().play();
-  }, []);
+    actions[animation].reset().fadeIn(0.5).play();
+
+    return () => {
+      actions[animation].reset().fadeOut(0.5);
+    };
+  }, [props.animation]);
 
   return (
     <group {...props} ref={group} dispose={null}>
