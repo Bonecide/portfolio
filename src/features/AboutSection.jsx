@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 export const AboutSection = () => {
   return (
     <Section>
-      <h1 className="text-6xl font-extrabold leading-snug">
+      <h1 className="text-6xl font-extrabold leading-snug text-[#f2b786]">
         Hi, I'm
         <br />
-        <span className="bg-white px-1 italic">Kasymov Marsel</span>
+        <span className="bg-white px-1 italic text-black">Kasymov Marsel</span>
       </h1>
       <motion.p
         className="text-lg text-white mt-4"

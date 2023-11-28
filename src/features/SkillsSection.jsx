@@ -45,12 +45,12 @@ export const SkillsSection = () => {
   return (
     <Section>
       <motion.div whileInView={"visible"}>
-        <h2 className="text-5xl font-bold">Skills</h2>
+        <h2 className="text-5xl font-bold text-[#f2b786]">Skills</h2>
         <div className=" mt-8 space-y-4">
           {skills.map((skill, index) => (
             <div className="w-64" key={index}>
               <motion.h3
-                className="text-xl font-bold text-gray-800"
+                className="text-xl font-bold text-white"
                 initial={{
                   opacity: 0,
                 }}
@@ -68,7 +68,7 @@ export const SkillsSection = () => {
               </motion.h3>
               <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
                 <motion.div
-                  className="h-full bg-indigo-500 rounded-full "
+                  className="h-full bg-[#3A86FF] rounded-full "
                   style={{ width: `${skill.level}%` }}
                   initial={{
                     scaleX: 0,
@@ -89,12 +89,12 @@ export const SkillsSection = () => {
           ))}
         </div>
         <div>
-          <h2 className="text-5xl font-bold mt-10">Languages</h2>
+          <h2 className="text-5xl font-bold mt-10 text-[#f2b786]">Languages</h2>
           <div className=" mt-8 space-y-4">
             {languages.map((lng, index) => (
               <div className="w-64" key={index}>
                 <motion.h3
-                  className="text-xl font-bold text-gray-800"
+                  className="text-xl font-bold text-white"
                   initial={{
                     opacity: 0,
                   }}
