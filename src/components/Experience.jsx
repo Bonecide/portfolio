@@ -9,6 +9,7 @@ export const Experience = () => {
   return (
     <>
       <OrbitControls
+        
         enablePan={false}
         enableRotate={width > 800}
         autoRotate={true}
