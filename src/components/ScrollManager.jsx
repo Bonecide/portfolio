@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
 export const ScrollManager = (props) => {
-  const { section, onSectionChange } = props;
+  const { section, onSectionChange, setMenuOpened } = props;
 
   const data = useScroll();
   const lastScroll = useRef(0);
@@ -19,6 +19,7 @@ export const ScrollManager = (props) => {
       scrollTop: section * data.el.clientHeight,
       onStart: () => {
         isAnimating.current = true;
+        setMenuOpened(false);
       },
       onComplete: () => {
         isAnimating.current = false;

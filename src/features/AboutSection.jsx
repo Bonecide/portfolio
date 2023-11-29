@@ -23,7 +23,7 @@ export const AboutSection = () => {
           delay: 0.5,
         }}
       >
-        I Middle Frontend developer
+        Middle Frontend developer
       </motion.p>
       <motion.button
         className={`bg-indigo-600 text-white py-4 px-8 

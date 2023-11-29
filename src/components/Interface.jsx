@@ -9,7 +9,6 @@ export const Interface = () => {
     <div className="flex flex-col items-center w-screen max-h-[100vh]  ">
       <AboutSection />
       <SkillsSection />
-      <ProjectSections />
       <ContactSection />
     </div>
   );
