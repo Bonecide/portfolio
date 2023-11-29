@@ -24,7 +24,7 @@ function App() {
         <ScrollControls  pages={3} damping={0.1}>
           <ScrollManager setMenuOpened={setMenuOpened} section={section} onSectionChange={setSection} />
           <Scroll html>
-            <Interface />
+            <Interface setSection={setSection} />
           </Scroll>
           <Experience />
         </ScrollControls>

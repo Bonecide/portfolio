@@ -4,10 +4,10 @@ import { ProjectSections } from "../features/ProjectsSection";
 import { SkillsSection } from "../features/SkillsSection";
 import { Section } from "./Section";
 
-export const Interface = () => {
+export const Interface = ({ setSection }) => {
   return (
     <div className="flex flex-col items-center w-screen max-h-[100vh]  ">
-      <AboutSection />
+      <AboutSection setSection={setSection} />
       <SkillsSection />
       <ContactSection />
     </div>
