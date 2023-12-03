@@ -1,27 +1,19 @@
-import { Environment, OrbitControls, Sky } from "@react-three/drei";
-import { useControls } from "leva";
+import { Environment, OrbitControls } from "@react-three/drei";
 import { Avatar } from "./Avatar";
 import { Scene } from "./Scene";
 import { useState } from "react";
-export const Experience = () => {
+export const BackgroundScene = () => {
   const [width] = useState(window.innerWidth);
 
   return (
     <>
       <OrbitControls
-        
         enablePan={false}
         enableRotate={width > 800}
         autoRotate={true}
-        autoRotateSpeed={1} // Adjust this value
+        autoRotateSpeed={1}
         enableZoom={false}
       />
-      {/* <Sky
-        distance={450000} // Camera distance (default is 400000)
-        sunPosition={[0, 1, 0]} // Sun position at zenith
-        inclination={0.25} // Sun elevation (from 0 to 1)
-        azimuth={0.3} // Sun rotation around the Y axis (from 0 to 1)
-      /> */}
       <Environment preset="sunset" />
       <group scale={width > 800 ? 1 : 0.6} position-y={-1}>
         <group position={[-0.2, 0, -0.7]} rotation-y={Math.PI * 0.9}>

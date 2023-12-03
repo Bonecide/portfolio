@@ -7,7 +7,6 @@ import swal from "sweetalert";
 export const ContactSection = () => {
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
-  console.log(isLoading);
   const handleSubmit = async (e) => {
     setIsLoading(true);
     e.preventDefault();
@@ -36,8 +35,7 @@ export const ContactSection = () => {
         );
     } catch (error) {
       console.error("Error sending email:", error);
-    } finally {
-    }
+    } 
   };
   return (
     <Section>

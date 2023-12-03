@@ -21,19 +21,15 @@ export function Avatar(props) {
   );
 
   typingAnimation[0].name = "Typing";
-  fallingAnimations[0].name = "Falling";
-  standingAnimations[0].name = "Standing";
   const { actions } = useAnimations(
     [typingAnimation[0], fallingAnimations[0], standingAnimations[0]],
     group
   );
 
   useEffect(() => {
-    actions[animation].reset().play();
+    actions[animation].play();
 
-    return () => {
-      actions[animation].reset().fadeOut(0.5);
-    };
+    
   }, [props.animation]);
 
   return (

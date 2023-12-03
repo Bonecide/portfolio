@@ -1,3 +1,4 @@
+import { useNavigate, useNavigation } from "react-router-dom";
 import { Section } from "../components/Section";
 import { motion } from "framer-motion";
 const skills = [
@@ -41,10 +42,10 @@ const languages = [
   },
 ];
 
-export const SkillsSection = () => {
+export const SkillsSection = ({navigate}) => {
   return (
     <Section>
-      <motion.div whileInView={"visible"}>
+      <motion.div id="skills" whileInView={"visible"}>
         <h2 className="text-xl md:text-5xl font-bold text-[#f2b786] ">
           Skills
         </h2>
@@ -137,6 +138,32 @@ export const SkillsSection = () => {
             ))}
           </div>
         </div>
+        <motion.button
+          onClick={() => navigate('/experience')}
+          className={`bg-indigo-600 text-white py-4 px-8 
+        w-[90%]
+      rounded-lg font-bold text-lg mt-10`}
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.3,
+            },
+          }}
+          whileHover={{
+            scale: 1.1,
+            transition: {
+              duration: 0.3,
+              delay: 0,
+            },
+          }}
+        >
+          More
+        </motion.button>
       </motion.div>
     </Section>
   );

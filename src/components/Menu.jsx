@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { MenuButton } from "./MenuButton";
+import { useNavigate } from "react-router-dom";
 
 export const Menu = ({ onSectionChange, menuOpened, setMenuOpened }) => {
+  const navigate = useNavigate();
   return (
     <>
       <button
@@ -30,8 +32,38 @@ export const Menu = ({ onSectionChange, menuOpened, setMenuOpened }) => {
       ${menuOpened ? "w-full md:w-80" : "w-0"}`}
       >
         <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
-          <MenuButton label="About" onClick={() => onSectionChange(0)} />
-          <MenuButton label="Skills" onClick={() => onSectionChange(1)} />
+          <MenuButton
+            label="About"
+            onClick={() => {
+              navigate("/");
+              onSectionChange(0);
+            }}
+          />
+          <MenuButton
+            label="Skills"
+            onClick={() => {
+              if(onSectionChange){
+                onSectionChange(1)
+              }
+              
+              navigate("/?section=1");
+            }}
+          />
+          <MenuButton
+            label="Experience"
+            onClick={() => {
+              navigate("/experience");
+            }}
+          />
+          <MenuButton
+            label="Contact"
+            onClick={() => {
+              if(onSectionChange){
+                onSectionChange(2)
+              }
+              navigate("/?section=2");
+            }}
+          />
         </div>
       </div>
     </>
