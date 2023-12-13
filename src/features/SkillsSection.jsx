@@ -42,7 +42,7 @@ const languages = [
   },
 ];
 
-export const SkillsSection = ({navigate}) => {
+export const SkillsSection = ({ navigate }) => {
   return (
     <Section>
       <motion.div id="skills" whileInView={"visible"}>
@@ -139,7 +139,7 @@ export const SkillsSection = ({navigate}) => {
           </div>
         </div>
         <motion.button
-          onClick={() => navigate('/experience')}
+          onClick={() => navigate("/experience")}
           className={`bg-indigo-600 text-white py-4 px-8 
         w-[90%]
       rounded-lg font-bold text-lg mt-10`}

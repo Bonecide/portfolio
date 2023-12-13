@@ -22,3 +22,7 @@ body {
 .cursor-mover {
   cursor: url("/move.svg"), pointer;
 }
+
+.work-experience-slider .slick-slide {
+  padding-right: 20px; 
+}

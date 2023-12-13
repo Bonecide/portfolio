@@ -1,4 +1,4 @@
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, Sky } from "@react-three/drei";
 import { Avatar } from "./Avatar";
 import { Scene } from "./Scene";
 import { useState } from "react";
