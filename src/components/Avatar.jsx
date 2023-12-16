@@ -11,12 +11,7 @@ export function Avatar(props) {
   const { nodes, materials } = useGLTF("models/avatar.glb");
 
   const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
-  const { animations: fallingAnimations } = useFBX(
-    "animations/Falling Idle.fbx"
-  );
-  const { animations: standingAnimations } = useFBX(
-    "animations/Standing Idle.fbx"
-  );
+
 
   typingAnimation[0].name = "Typing";
   const { actions } = useAnimations(typingAnimation, group);
