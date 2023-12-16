@@ -24,5 +24,12 @@ body {
 }
 
 .work-experience-slider .slick-slide {
-  padding-right: 20px; 
+  padding-right: 20px;
+}
+
+.slick-prev {
+  display: none !important;
+}
+.slick-next {
+  display: none !important;
 }
