@@ -67,7 +67,7 @@ export const WorkExperience = () => {
           {WORK_EXPERIENCE.map((item, idx) => (
             <div
               key={item.title}
-              className="md:p-[60px] p-[30px] bg-[#20023D] border-[#3D265A] border-2 rounded-[18px] relative h-[450px] md:h-[auto]"
+              className="md:p-[60px] p-[30px] bg-[#20023D] border-[#3D265A] border-2 rounded-[18px] relative "
             >
               <div className="flex flex-col gap-[20px]">
                 <p className="text-[#ACABC8] text-[14px]">{item.timing}</p>
