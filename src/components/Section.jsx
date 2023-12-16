@@ -4,7 +4,7 @@ export const Section = ({ children }) => {
   return (
     <motion.section
       className={`
-       min-h-screen w-screen p-8 pl-[50px] max-w-screen-2xl mx-auto flex flex-col items-start justify-center
+       min-h-screen w-screen p-[10px] md:pl-[50px] max-w-screen-2xl mx-auto flex flex-col items-start justify-center
         `}
       style={{ scrollSnapAlign: "center" }}
       initial={{

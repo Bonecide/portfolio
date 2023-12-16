@@ -141,7 +141,7 @@ export const SkillsSection = ({ navigate }) => {
         <motion.button
           onClick={() => navigate("/experience")}
           className={`bg-indigo-600 text-white py-4 px-8 
-        w-[90%]
+        w-[75%] md:w-[90%]
       rounded-lg font-bold text-lg mt-10`}
           initial={{
             opacity: 0,
