@@ -12,8 +12,10 @@ import {
   useParams,
   useSearchParams,
 } from "react-router-dom";
+import { isDesktop } from "react-device-detect";
 
 export const Home = () => {
+  
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
   const [started, setStarted] = useState(false);
@@ -31,17 +33,30 @@ export const Home = () => {
       <LoadingScreen started={started} setStarted={setStarted} />
       <Canvas shadows camera={{ position: [0, 2, 5], fov: 30 }}>
         <color attach="background" args={["#3C096C"]} />
-        <ScrollControls pages={3} damping={0.1}>
-          <ScrollManager
-            setMenuOpened={setMenuOpened}
-            section={section}
-            onSectionChange={setSection}
-          />
-          <Scroll html>
-            <Interface navigate={navigate} setSection={setSection} />
-          </Scroll>
-          <BackgroundScene />
-        </ScrollControls>
+        {isDesktop ? (
+          <ScrollControls pages={3} damping={0.1}>
+            <ScrollManager
+              setMenuOpened={setMenuOpened}
+              section={section}
+              onSectionChange={setSection}
+            />
+            <Scroll html>
+              <Interface navigate={navigate} setSection={setSection} />
+            </Scroll>
+          </ScrollControls>
+        ) : (
+          <ScrollControls pages={3} damping={0}>
+            <ScrollManager
+              setMenuOpened={setMenuOpened}
+              section={section}
+              onSectionChange={setSection}
+            />
+            <Scroll html>
+              <Interface navigate={navigate} setSection={setSection} />
+            </Scroll>
+          </ScrollControls>
+        )}
+        <BackgroundScene />
       </Canvas>
       <Menu
         onSectionChange={setSection}
