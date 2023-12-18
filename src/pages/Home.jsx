@@ -56,7 +56,7 @@ export const Home = () => {
             </Scroll>
           </ScrollControls>
         )}
-        <BackgroundScene />
+        <BackgroundScene menuIsOpened={menuOpened} />
       </Canvas>
       <Menu
         onSectionChange={setSection}

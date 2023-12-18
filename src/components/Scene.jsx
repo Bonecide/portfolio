@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.15 public/models/scene.gltf
 */
 
 import React, { useRef } from "react";
-import { useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF, useTexture, useVideoTexture } from "@react-three/drei";
 import * as THREE from "three";
 export function Scene(props) {
   const { nodes, materials } = useGLTF("/models/scene.glb");
