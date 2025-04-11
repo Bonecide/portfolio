@@ -35,11 +35,13 @@ export const ContactSection = () => {
         );
     } catch (error) {
       console.error("Error sending email:", error);
-    } 
+    }
   };
   return (
-    <Section>
-      <h2 className="text-5xl font-bold text-[#f2b786]">Contact me</h2>
+    <Section >
+      <h2 className="text-5xl mt-[20px] md:mt-0 font-bold text-[#f2b786]">
+        Contact me
+      </h2>
       <div className="mt-8 p-8 rounded-md bg-white/70 w-96 max-w-full">
         <form ref={form} onSubmit={handleSubmit}>
           <label for="name" className="font-medium text-gray-700 block mb-1">

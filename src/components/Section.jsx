@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-export const Section = ({ children }) => {
+export const Section = ({ children, isMain }) => {
   return (
     <motion.section
       className={`
-       min-h-screen w-screen p-[10px] md:pl-[50px] max-w-screen-2xl mx-auto flex flex-col items-start justify-center
+      min-h-screen max-h-screen w-screen p-[10px] md:pl-[50px] max-w-screen-2xl mx-auto flex flex-col items-start justify-center
         `}
       style={{ scrollSnapAlign: "center" }}
       initial={{

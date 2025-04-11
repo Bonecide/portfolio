@@ -15,7 +15,6 @@ import {
 import { isDesktop } from "react-device-detect";
 
 export const Home = () => {
-  
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
   const [started, setStarted] = useState(false);

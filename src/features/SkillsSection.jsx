@@ -23,12 +23,12 @@ const skills = [
     level: 70,
   },
   {
-    title: "Threejs / React Three Fiber",
-    level: 25,
+    title: "Wagmi",
+    level: 60,
   },
   {
     title: "Solidity",
-    level: 20,
+    level: 50,
   },
 ];
 const languages = [
@@ -92,9 +92,6 @@ export const SkillsSection = ({ navigate }) => {
           ))}
         </div>
         <div>
-          <h2 className="text-xl md:text-5xl font-bold mt-10 text-[#f2b786]">
-            Languages
-          </h2>
           <div className=" mt-8 space-y-4">
             {languages.map((lng, index) => (
               <div className="w-64" key={index}>
